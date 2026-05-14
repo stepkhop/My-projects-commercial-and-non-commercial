@@ -1,58 +1,228 @@
-# My-projects-commercial-and-non-commercial + my study experience:
+# Степан Харитонов
 
+## ML Engineer | Scientific Computing | Mathematical Modeling
 
+Студент ПНИПУ по направлению «Математическое моделирование и прикладная математика». Специализируюсь на разработке ML/AI-решений, scientific computing и математическом моделировании. Имею опыт участия в исследовательских и коммерческих проектах, связанных с обработкой медицинских данных, промышленным моделированием, VR-разработкой и построением вычислительных систем.
 
+Основные профессиональные интересы:
 
+* Machine Learning и Deep Learning
+* NLP и LLM Systems
+* Scientific Computing
+* Mathematical Modeling
+* Computer Vision
+* FEM / Mesh Generation
+* VR Development
+* AI Safety
 
-# Рабочий опыт:
+---
 
-1.  Научная работа, ФБУН ФНЦ - оптимизация расчётного пакета, определение рёбер, единый софт для всех программных модулей, также разработка алгоритма кластеризации и генерации КЭ сетки по снимках мрт легких:
+# Research & Engineering Experience
 
-https://github.com/stepkhop/Reading_files
+## Федеральный научный центр медико-профилактических технологий
 
-2. Решение технического задания по генерации бинарного дерева и преобразования его в формат PNG:
+**Research Engineer / Scientific Computing**
 
-https://github.com/stepkhop/Developments-without-edits-
+Участвую в разработке вычислительного программного комплекса для моделирования физиологических процессов и обработки медицинских данных.
 
-3. Разработка VR-тренажера установки ЭЛОУ на базе сред моделирования UniSimDesign и движка Unity по заказу "Лукойл-Пермнефтеоргсинтез"
+### Основные задачи:
 
-https://disk.yandex.ru/i/SQ_X1uPNmg2m3w
+* оптимизация вычислительного пакета;
+* разработка единого интерфейса взаимодействия программных модулей;
+* реализация алгоритмов кластеризации;
+* генерация конечно-элементных сеток по снимкам МРТ легких;
+* обработка и структурирование медицинских данных;
+* поддержка вычислительных scientific workflows.
 
-4. Моделирование процессов парафиноотложения по заказу "Лукойл - Сибирь"
+### Технологии:
 
-https://disk.yandex.ru/i/7am2Gr5G_skPlQ
-https://disk.yandex.ru/d/0wAGhXKa8cGfxQ
-https://disk.yandex.ru/d/Wd0v1GjjqenkBw
+`Python` `Scientific Computing` `Clustering Algorithms` `FEM` `Medical Imaging`
 
-5. VR разработка (Unity, работа с окружение, настройка сценариев, настройка окружения для VR\ захват объектов\физика объектов) 
-Пока что проект на стадии разработки, не могу ничего рассказать про него, кроме того, что он очень интересный и перспективный
+Repository:
+[https://github.com/stepkhop/Reading_files](https://github.com/stepkhop/Reading_files)
 
-6. Программа для перевода из градусов по Фаренгейту в градусы по Цельсию
-https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius
+---
 
+## VR-тренажер технологической установки ЭЛОУ
 
+**Заказчик:** Лукойл-Пермнефтеоргсинтез
 
+Разработка VR-тренажера промышленной установки на базе Unity и UniSimDesign.
 
-# Учебный опыт:
+### Основные задачи:
 
-1-9 класс - класс с математическим уклоном
-10-11 класс - физико-математический лицей при университете
-1 курс - ПНИПУ, кафедра математического моделирования и процессов, специальность математическое моделирование, поток - прикладная математика и информатика
+* интеграция инженерных моделей UniSimDesign;
+* настройка VR-окружения;
+* реализация пользовательских сценариев;
+* взаимодействие с объектами и физической системой;
+* моделирование технологических процессов.
 
-Сириус курсы - программирование на питон, с++, олимпиадная математика 6-9 класс, олимпиадная физика 9 класс
+### Технологии:
 
-Академия Первых г.Пермь - Олимпиадное программирование на 1с (часть 1, часть 2, подготовка к WorldSkillsJunior), Олимпиадное программирование на с++ (часть 1, часть 2), Школа IT-проектов(г.Пермь - Победители краевого этапа, г.Анапа - победители всероссийского этапа), Большие Вызовы (Победитель и участник краевого и заключительных этапов конкурса)
+`Unity` `VR` `Simulation Systems` `Physics`
 
-Яндекс Лицей 1 год по питону
+Demo:
+[https://disk.yandex.ru/i/SQ_X1uPNmg2m3w](https://disk.yandex.ru/i/SQ_X1uPNmg2m3w)
 
+---
 
+## Моделирование процессов парафиноотложения
 
-# Стек:
+**Заказчик:** Лукойл-Сибирь
 
-Python - ООП, базовый синтаксис, работа для коммерции, немного изучал ml, анализ данных, визуализацию и разработку программных пакетов
-C++ - работа на учебном опыте, базовый синтаксис, немного затрагивал ООП
-Docker - работал 1 раз, знаю его не сильно хорошо, но если потребуется могу изучить
-Linux - работал какое-то время в учебных целях, также изучал подсистему WSL
+Разработка решений для анализа и прогнозирования процессов парафиноотложения в нефтяных скважинах.
 
+### Основные задачи:
 
+* обработка производственных данных;
+* построение моделей прогнозирования;
+* анализ эксплуатационных параметров;
+* оптимизация производственных процессов;
+* разработка прикладных вычислительных решений.
 
+### Технологии:
+
+`Python` `Machine Learning` `Data Analysis` `Mathematical Modeling`
+
+Project Materials:
+
+* [https://disk.yandex.ru/i/7am2Gr5G_skPlQ](https://disk.yandex.ru/i/7am2Gr5G_skPlQ)
+* [https://disk.yandex.ru/d/0wAGhXKa8cGfxQ](https://disk.yandex.ru/d/0wAGhXKa8cGfxQ)
+* [https://disk.yandex.ru/d/Wd0v1GjjqenkBw](https://disk.yandex.ru/d/Wd0v1GjjqenkBw)
+
+---
+
+## Binary Tree Visualization System
+
+Разработка решения технического задания по генерации бинарного дерева и экспорту структуры в PNG.
+
+### Основные задачи:
+
+* генерация и обработка структур данных;
+* визуализация бинарного дерева;
+* экспорт графической структуры;
+* реализация алгоритмов обработки графов.
+
+### Технологии:
+
+`Python` `Algorithms` `Data Structures`
+
+Repository:
+[https://github.com/stepkhop/Developments-without-edits-](https://github.com/stepkhop/Developments-without-edits-)
+
+---
+
+## VR Development
+
+Разработка VR-приложения с использованием Unity.
+
+### Основные задачи:
+
+* разработка VR-взаимодействий;
+* настройка окружения;
+* работа с физикой объектов;
+* реализация сценариев поведения;
+* интеграция игровых механик.
+
+Проект находится под NDA.
+
+### Технологии:
+
+`Unity` `VR Interaction Systems` `Physics`
+
+---
+
+# Technical Stack
+
+## Languages
+
+* Python
+* C++
+
+## Machine Learning / AI
+
+* PyTorch
+* Scikit-learn
+* NumPy
+* Pandas
+* Data Processing
+* Feature Engineering
+* ML Pipelines
+
+## Scientific Computing
+
+* Mathematical Modeling
+* Numerical Methods
+* FEM / Mesh Generation
+* Clustering Algorithms
+* Medical Data Processing
+
+## Development
+
+* Git
+* Linux
+* Docker
+* WSL
+* Unity
+
+---
+
+# Education
+
+## Perm National Research Polytechnic University (PNRPU)
+
+**Applied Mathematics and Mathematical Modeling**
+Bachelor Degree | 1st Year Student
+
+### Additional Education
+
+* Sirius Educational Center:
+
+  * Python
+  * C++
+  * Olympiad Mathematics
+  * Olympiad Physics
+
+* Academy of First (Perm):
+
+  * Competitive Programming (1C)
+  * Competitive Programming (C++)
+  * IT Project School
+  * Big Challenges
+
+* Yandex Lyceum:
+
+  * Python Development
+
+---
+
+# Achievements
+
+* Winner of the regional stage of the IT Project School
+* Winner of the national stage of the IT Project School
+* Winner and prize holder of the “Big Challenges” competition
+* Participant of RSOSH Olympiads:
+
+  * Phystech
+  * Rosatom
+  * Gazprom
+  * Zvezda
+
+---
+
+# Selected Repositories
+
+* [https://github.com/stepkhop/Reading_files](https://github.com/stepkhop/Reading_files)
+* [https://github.com/stepkhop/Developments-without-edits-](https://github.com/stepkhop/Developments-without-edits-)
+* [https://github.com/stepkhop/Solving-the-problem-on-SMILE](https://github.com/stepkhop/Solving-the-problem-on-SMILE)
+* [https://github.com/stepkhop/My-projects-commercial-and-non-commercial](https://github.com/stepkhop/My-projects-commercial-and-non-commercial)
+* [https://github.com/stepkhop/Refactoring_science_work](https://github.com/stepkhop/Refactoring_science_work)
+* [https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius](https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius)
+
+---
+
+# Contacts
+
+Telegram: [https://t.me/kra23z](https://t.me/kra23z)
+GitHub: [https://github.com/stepkhop](https://github.com/stepkhop)
+Email: [stepan2007p@mail.ru](mailto:stepan2007p@mail.ru)
