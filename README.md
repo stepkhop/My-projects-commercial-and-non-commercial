@@ -1,228 +1,352 @@
-# Степан Харитонов
 
-## ML Engineer | Scientific Computing | Mathematical Modeling
-
-Студент ПНИПУ по направлению «Математическое моделирование и прикладная математика». Специализируюсь на разработке ML/AI-решений, scientific computing и математическом моделировании. Имею опыт участия в исследовательских и коммерческих проектах, связанных с обработкой медицинских данных, промышленным моделированием, VR-разработкой и построением вычислительных систем.
-
-Основные профессиональные интересы:
-
-* Machine Learning и Deep Learning
-* NLP и LLM Systems
-* Scientific Computing
-* Mathematical Modeling
-* Computer Vision
-* FEM / Mesh Generation
-* VR Development
-* AI Safety
 
 ---
 
-# Research & Engineering Experience
 
-## Федеральный научный центр медико-профилактических технологий
+# Степан Харитонов
 
-**Research Engineer / Scientific Computing**
+## ML Engineer | Deep Learning | Scientific Computing | Mathematical Modeling
 
-Участвую в разработке вычислительного программного комплекса для моделирования физиологических процессов и обработки медицинских данных.
+Фокус на разработке ML/AI систем, deep learning оптимизации и scientific computing. Опыт включает обучение нейросетей в условиях ограниченного вычислительного бюджета, медицинский анализ данных, промышленные ML-системы и вычислительное моделирование.
 
-### Основные задачи:
+Интересы: deep learning optimization, ML systems, scientific computing, medical imaging, FEM, numerical methods, AI safety.
 
-* оптимизация вычислительного пакета;
-* разработка единого интерфейса взаимодействия программных модулей;
-* реализация алгоритмов кластеризации;
-* генерация конечно-элементных сеток по снимкам МРТ легких;
-* обработка и структурирование медицинских данных;
-* поддержка вычислительных scientific workflows.
+---
 
-### Технологии:
+# Deep Learning Research Project — SMILE
 
-`Python` `Scientific Computing` `Clustering Algorithms` `FEM` `Medical Imaging`
+## Zero-Order Optimization of ResNet18 under Compute Constraints
 
-Repository:
+---
+
+## Постановка задачи
+
+Рассматривается обучение глубокой нейросети при ограничениях:
+
+* отсутствуют аналитические градиенты;
+* вычислительный бюджет строго ограничен (≤ 256 forward passes);
+* требуется стабильное обучение ResNet18.
+
+Формально задача оптимизации:
+
+$$
+\min_{\theta} \mathcal{L}(\theta)
+$$
+
+---
+
+## Методология
+
+### Zero-Order Optimization (SPSA)
+
+Градиент аппроксимируется как:
+
+$$
+g(\theta) \approx \frac{\mathcal{L}(\theta + \epsilon) - \mathcal{L}(\theta - \epsilon)}{2\epsilon}
+$$
+
+Это позволяет выполнять обучение без backpropagation.
+
+---
+
+### Гибридная оптимизация
+
+Используется комбинация:
+
+* SPSA (исследование пространства параметров)
+* Adam (стабилизация обновлений)
+
+---
+
+### Стратегия обучения
+
+* curriculum learning (поэтапное усложнение данных)
+* staged unfreezing слоёв
+* стабилизация low-compute режима
+* ограничение: ≤ 256 forward-pass операций
+
+---
+
+## Результаты
+
+* Accuracy: **4.12% → 21.47%**
+* стабильная сходимость при жестком ограничении вычислений
+* улучшение обобщающей способности модели
+
+---
+
+## Технологии
+
+Python · PyTorch · NumPy · Deep Learning · Optimization · Scientific Computing
+
+Репозиторий:
+[https://github.com/stepkhop/Solving-the-problem-on-SMILE](https://github.com/stepkhop/Solving-the-problem-on-SMILE)
+
+---
+
+# Medical Imaging & Scientific ML System
+
+* кластеризация МРТ легких
+* обработка медицинских изображений
+* FEM mesh generation pipeline
+* интеграция ML в scientific workflows
+* подготовка данных для физиологического моделирования
+
+Python · ML · Computer Vision · Clustering · FEM · Scientific Computing
+
 [https://github.com/stepkhop/Reading_files](https://github.com/stepkhop/Reading_files)
 
 ---
 
-## VR-тренажер технологической установки ЭЛОУ
+# Industrial ML System (Oil & Gas Forecasting)
 
-**Заказчик:** Лукойл-Пермнефтеоргсинтез
+* анализ временных рядов промышленных данных
+* feature engineering
+* построение ML моделей прогнозирования
+* внедрение в инженерные процессы
 
-Разработка VR-тренажера промышленной установки на базе Unity и UniSimDesign.
+Python · Scikit-learn · Pandas · ML · Data Analysis
 
-### Основные задачи:
-
-* интеграция инженерных моделей UniSimDesign;
-* настройка VR-окружения;
-* реализация пользовательских сценариев;
-* взаимодействие с объектами и физической системой;
-* моделирование технологических процессов.
-
-### Технологии:
-
-`Unity` `VR` `Simulation Systems` `Physics`
-
-Demo:
-[https://disk.yandex.ru/i/SQ_X1uPNmg2m3w](https://disk.yandex.ru/i/SQ_X1uPNmg2m3w)
+[https://disk.yandex.ru/i/7am2Gr5G_skPlQ](https://disk.yandex.ru/i/7am2Gr5G_skPlQ)
+[https://disk.yandex.ru/d/0wAGhXKa8cGfxQ](https://disk.yandex.ru/d/0wAGhXKa8cGfxQ)
+[https://disk.yandex.ru/d/Wd0v1GjjqenkBw](https://disk.yandex.ru/d/Wd0v1GjjqenkBw)
 
 ---
 
-## Моделирование процессов парафиноотложения
+# Computer Vision / Biomedical Signal Processing
 
-**Заказчик:** Лукойл-Сибирь
+* анализ эхокардиографии
+* обработка медицинских изображений
+* временные биомедицинские сигналы
+* feature extraction pipelines
 
-Разработка решений для анализа и прогнозирования процессов парафиноотложения в нефтяных скважинах.
-
-### Основные задачи:
-
-* обработка производственных данных;
-* построение моделей прогнозирования;
-* анализ эксплуатационных параметров;
-* оптимизация производственных процессов;
-* разработка прикладных вычислительных решений.
-
-### Технологии:
-
-`Python` `Machine Learning` `Data Analysis` `Mathematical Modeling`
-
-Project Materials:
-
-* [https://disk.yandex.ru/i/7am2Gr5G_skPlQ](https://disk.yandex.ru/i/7am2Gr5G_skPlQ)
-* [https://disk.yandex.ru/d/0wAGhXKa8cGfxQ](https://disk.yandex.ru/d/0wAGhXKa8cGfxQ)
-* [https://disk.yandex.ru/d/Wd0v1GjjqenkBw](https://disk.yandex.ru/d/Wd0v1GjjqenkBw)
+[https://github.com/stepkhop/My-projects-commercial-and-non-commercial](https://github.com/stepkhop/My-projects-commercial-and-non-commercial)
 
 ---
 
-## Binary Tree Visualization System
+# Data Structures & Algorithms
 
-Разработка решения технического задания по генерации бинарного дерева и экспорту структуры в PNG.
+* бинарные деревья
+* визуализация графов
+* экспорт PNG
+* алгоритмы обработки структур
 
-### Основные задачи:
-
-* генерация и обработка структур данных;
-* визуализация бинарного дерева;
-* экспорт графической структуры;
-* реализация алгоритмов обработки графов.
-
-### Технологии:
-
-`Python` `Algorithms` `Data Structures`
-
-Repository:
 [https://github.com/stepkhop/Developments-without-edits-](https://github.com/stepkhop/Developments-without-edits-)
 
 ---
 
-## VR Development
+# VR / Simulation Systems
 
-Разработка VR-приложения с использованием Unity.
+* VR взаимодействия
+* физические симуляции
+* инженерные тренажеры
+* Unity-based systems
 
-### Основные задачи:
-
-* разработка VR-взаимодействий;
-* настройка окружения;
-* работа с физикой объектов;
-* реализация сценариев поведения;
-* интеграция игровых механик.
-
-Проект находится под NDA.
-
-### Технологии:
-
-`Unity` `VR Interaction Systems` `Physics`
+[https://disk.yandex.ru/i/SQ_X1uPNmg2m3w](https://disk.yandex.ru/i/SQ_X1uPNmg2m3w)
 
 ---
 
-# Technical Stack
+# Skills
 
-## Languages
-
-* Python
-* C++
-
-## Machine Learning / AI
-
-* PyTorch
-* Scikit-learn
-* NumPy
-* Pandas
-* Data Processing
-* Feature Engineering
-* ML Pipelines
-
-## Scientific Computing
-
-* Mathematical Modeling
-* Numerical Methods
-* FEM / Mesh Generation
-* Clustering Algorithms
-* Medical Data Processing
-
-## Development
-
-* Git
-* Linux
-* Docker
-* WSL
-* Unity
+Python · C++
+PyTorch · Scikit-learn · NumPy · Pandas
+Deep Learning · Optimization · ML Systems
+Mathematical Modeling · FEM · Numerical Methods
+Git · Linux · Docker · WSL · Unity
 
 ---
 
-# Education
+# Selected Projects
 
-## Perm National Research Polytechnic University (PNRPU)
-
-**Applied Mathematics and Mathematical Modeling**
-Bachelor Degree | 1st Year Student
-
-### Additional Education
-
-* Sirius Educational Center:
-
-  * Python
-  * C++
-  * Olympiad Mathematics
-  * Olympiad Physics
-
-* Academy of First (Perm):
-
-  * Competitive Programming (1C)
-  * Competitive Programming (C++)
-  * IT Project School
-  * Big Challenges
-
-* Yandex Lyceum:
-
-  * Python Development
+[https://github.com/stepkhop/Solving-the-problem-on-SMILE](https://github.com/stepkhop/Solving-the-problem-on-SMILE)
+[https://github.com/stepkhop/Reading_files](https://github.com/stepkhop/Reading_files)
+[https://github.com/stepkhop/Developments-without-edits-](https://github.com/stepkhop/Developments-without-edits-)
+[https://github.com/stepkhop/My-projects-commercial-and-non-commercial](https://github.com/stepkhop/My-projects-commercial-and-non-commercial)
+[https://github.com/stepkhop/Refactoring_science_work](https://github.com/stepkhop/Refactoring_science_work)
+[https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius](https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius)
 
 ---
 
-# Achievements
-
-* Winner of the regional stage of the IT Project School
-* Winner of the national stage of the IT Project School
-* Winner and prize holder of the “Big Challenges” competition
-* Participant of RSOSH Olympiads:
-
-  * Phystech
-  * Rosatom
-  * Gazprom
-  * Zvezda
-
----
-
-# Selected Repositories
-
-* [https://github.com/stepkhop/Reading_files](https://github.com/stepkhop/Reading_files)
-* [https://github.com/stepkhop/Developments-without-edits-](https://github.com/stepkhop/Developments-without-edits-)
-* [https://github.com/stepkhop/Solving-the-problem-on-SMILE](https://github.com/stepkhop/Solving-the-problem-on-SMILE)
-* [https://github.com/stepkhop/My-projects-commercial-and-non-commercial](https://github.com/stepkhop/My-projects-commercial-and-non-commercial)
-* [https://github.com/stepkhop/Refactoring_science_work](https://github.com/stepkhop/Refactoring_science_work)
-* [https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius](https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius)
-
----
-
-# Contacts
+# Contact
 
 Telegram: [https://t.me/kra23z](https://t.me/kra23z)
 GitHub: [https://github.com/stepkhop](https://github.com/stepkhop)
 Email: [stepan2007p@mail.ru](mailto:stepan2007p@mail.ru)
+
+---
+
+---
+
+
+
+# Stepan Kharitonov
+
+## ML Engineer | Deep Learning | Scientific Computing | Mathematical Modeling
+
+Focused on ML/AI systems, deep learning optimization, and scientific computing. Experience includes neural network training under strict compute constraints, medical data analysis, industrial ML systems, and computational modeling pipelines.
+
+Interests: deep learning optimization, ML systems, scientific computing, medical imaging, FEM, numerical methods, AI safety.
+
+---
+
+# Deep Learning Research Project — SMILE
+
+## Zero-Order Optimization of ResNet18 under Compute Constraints
+
+---
+
+## Problem Statement
+
+We consider training a deep neural network under the following constraints:
+
+* no access to analytical gradients;
+* strict compute budget (≤ 256 forward passes);
+* requirement for stable training of ResNet18.
+
+Optimization objective:
+
+$$
+\min_{\theta} \mathcal{L}(\theta)
+$$
+
+---
+
+## Methodology
+
+### Zero-Order Optimization (SPSA)
+
+Gradient is approximated as:
+
+$$
+g(\theta) \approx \frac{\mathcal{L}(\theta + \epsilon) - \mathcal{L}(\theta - \epsilon)}{2\epsilon}
+$$
+
+enabling gradient-free optimization.
+
+---
+
+### Hybrid Optimization Scheme
+
+Combination of:
+
+* SPSA (exploration of parameter space)
+* Adam (stabilization of updates)
+
+---
+
+### Training Strategy
+
+* curriculum learning
+* staged layer unfreezing
+* stabilization in low-compute regime
+* constraint: ≤ 256 forward passes
+
+---
+
+## Results
+
+* Accuracy: **4.12% → 21.47%**
+* stable convergence under compute constraints
+* improved generalization in low-resource settings
+
+---
+
+## Stack
+
+Python · PyTorch · NumPy · Deep Learning · Optimization · Scientific Computing
+
+Repository:
+[https://github.com/stepkhop/Solving-the-problem-on-SMILE](https://github.com/stepkhop/Solving-the-problem-on-SMILE)
+
+---
+
+# Medical Imaging & Scientific ML System
+
+* MRI lung clustering
+* medical image preprocessing
+* FEM mesh generation pipeline
+* ML integration into scientific workflows
+* preparation for physiological modeling
+
+Python · ML · Computer Vision · Clustering · FEM · Scientific Computing
+
+[https://github.com/stepkhop/Reading_files](https://github.com/stepkhop/Reading_files)
+
+---
+
+# Industrial ML System (Oil & Gas Forecasting)
+
+* industrial time-series analysis
+* feature engineering
+* predictive ML models
+* deployment into engineering workflows
+
+Python · Scikit-learn · Pandas · ML · Data Analysis
+
+[https://disk.yandex.ru/i/7am2Gr5G_skPlQ](https://disk.yandex.ru/i/7am2Gr5G_skPlQ)
+[https://disk.yandex.ru/d/0wAGhXKa8cGfxQ](https://disk.yandex.ru/d/0wAGhXKa8cGfxQ)
+[https://disk.yandex.ru/d/Wd0v1GjjqenkBw](https://disk.yandex.ru/d/Wd0v1GjjqenkBw)
+
+---
+
+# Computer Vision / Biomedical Signal Processing
+
+* echocardiography analysis
+* medical image processing
+* biomedical time-series modeling
+* feature extraction pipelines
+
+[https://github.com/stepkhop/My-projects-commercial-and-non-commercial](https://github.com/stepkhop/My-projects-commercial-and-non-commercial)
+
+---
+
+# Data Structures & Algorithms
+
+* binary tree generation
+* graph visualization
+* PNG export systems
+* structural algorithm design
+
+[https://github.com/stepkhop/Developments-without-edits-](https://github.com/stepkhop/Developments-without-edits-)
+
+---
+
+# VR / Simulation Systems
+
+* VR interaction systems
+* physics-based simulation
+* industrial training environments
+* Unity-based simulation tools
+
+[https://disk.yandex.ru/i/SQ_X1uPNmg2m3w](https://disk.yandex.ru/i/SQ_X1uPNmg2m3w)
+
+---
+
+# Skills
+
+Python · C++
+PyTorch · Scikit-learn · NumPy · Pandas
+Deep Learning · Optimization · ML Systems
+Mathematical Modeling · FEM · Numerical Methods
+Git · Linux · Docker · WSL · Unity
+
+---
+
+# Selected Projects
+
+[https://github.com/stepkhop/Solving-the-problem-on-SMILE](https://github.com/stepkhop/Solving-the-problem-on-SMILE)
+[https://github.com/stepkhop/Reading_files](https://github.com/stepkhop/Reading_files)
+[https://github.com/stepkhop/Developments-without-edits-](https://github.com/stepkhop/Developments-without-edits-)
+[https://github.com/stepkhop/My-projects-commercial-and-non-commercial](https://github.com/stepkhop/My-projects-commercial-and-non-commercial)
+[https://github.com/stepkhop/Refactoring_science_work](https://github.com/stepkhop/Refactoring_science_work)
+[https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius](https://github.com/stepkhop/Temperature-converter-from-Fahrenheit-to-Celsius)
+
+---
+
+# Contact
+
+Telegram: [https://t.me/kra23z](https://t.me/kra23z)
+GitHub: [https://github.com/stepkhop](https://github.com/stepkhop)
+Email: [stepan2007p@mail.ru](mailto:stepan2007p@mail.ru)
+
+---
